@@ -1,0 +1,303 @@
+:root {
+
+    --std-font: 'Roboto', sans-serif;
+    --turq: #1abc9c;
+    --cloud: #ecf0f1;
+    --red: #e74c3c;
+    --red-dark: #ae0c13;
+    --purple: #8a42ff;
+    --purple-dark: #6426c9;
+    --midnight: #2c3e50;
+    --darkg: #616161;
+    --body-bg: #fafafa;
+    --header-bg: #fdfdfd;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: var(--std-font);
+    z-index: 1;
+    outline: 0;
+}
+
+body, html {
+
+    height: 100%;
+    background-color: var(--body-bg);
+}
+
+header {
+
+    border-top: 5px solid var(--purple);
+    border-bottom: 1px solid var(--cloud);
+    padding: 10px;
+    background-color: var(--header-bg);
+    box-shadow: 0px 1px 1px var(--midnight);
+}
+
+header h1, .newsletter h1 {
+
+    color: var(--midnight);
+    font-weight: 400;
+    display: inline-block;
+}
+
+header h1 b, .newsletter h1 b {
+
+    color: var(--purple)
+}
+
+header ul {
+
+    display: inline-block;
+    list-style: none;
+}
+
+header ul li {
+
+    float: left;
+    margin-left: 60px;
+}
+
+header ul li a {
+
+    text-decoration: none;
+    color: var(--darkg);
+    font-size: 18px;
+}
+
+header ul li a:hover {
+
+    color: var(--purple);
+}
+
+header div {
+
+    float: right;
+}
+
+header div button {
+
+    --side_button_paddings: 12px;
+    background: none;
+    border: 1px solid var(--midnight);
+    color: var(--midnight);
+    border-radius: 3px;
+    padding: 7px;
+    padding-left: var(--side_button_paddings);
+    padding-right: var(--side_button_paddings);
+    font-size: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+header div button:hover {
+
+    background-color: var(--midnight);
+    color: #fff;
+}
+
+.signup {
+
+    font-size: 18px;
+    background-color: var(--purple);
+    color: var(--cloud);
+    border-color: var(--purple);
+}
+
+.signup:hover {
+
+    background-color: var(--purple-dark);
+    border-color: var(--purple-dark);
+}
+
+/* =BODY= */
+
+.wrapper {
+
+    text-align: center;
+}
+
+.container {
+
+    background: #8a42ff; /* Old browsers */
+    background: -moz-linear-gradient(left, #8a42ff 0%, #1abc9c 87%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #8a42ff 0%,#1abc9c 87%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #8a42ff 0%,#1abc9c 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a42ff', endColorstr='#1abc9c',GradientType=1 ); /* IE6-9 */
+    position: relative;
+    height: 230px;
+}
+
+.welcome {
+
+    color: #fff;
+    padding-top: 40px;
+    text-shadow: 0 1px 1px var(--midnight);
+}
+
+.welcome div {
+
+    --br-margin: 10px;
+    height: 3px;
+    width: 100px;
+    display: inline-block;
+    background-color: var(--midnight);
+    margin-top: var(--br-margin);
+    margin-bottom: var(--br-margin);
+}
+
+.newsletter {
+
+    position: absolute;
+    text-align: left;
+    padding: 40px;
+    padding-bottom: 20px;
+    width: 400px;
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #aaa;
+    left: calc(50% - 220px);
+    top: 160px;
+    border-radius: 10px;
+}
+
+.newsletter h3 {
+
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: var(--midnight);
+}
+
+.newsletter p {
+
+    color: var(--midnight);
+    position: absolute;
+    left: 15px;
+    top: 40px;
+}
+
+.newsletter div {
+
+    margin-top: 40px;
+    border-radius: 3px;
+}
+
+.newsletter div input, .newsletter div button {
+
+    --newsletter-font-size: 18px;
+    --newsletter-padding: 2px;
+    background-color: #f9f9f9;
+    padding: var(--newsletter-padding);
+    font-size: var(--newsletter-font-size);
+    border: 1px solid var(--midnight);
+}
+
+.newsletter div button {
+    
+    --newsletter-font-size: 16px;
+    --newsletter-padding: 4px;
+    padding-bottom: 3px;
+    padding-left: 8px;
+    padding-left: 8px;
+    border-left: none;
+    background-color: var(--midnight);
+    color: #fff;
+    cursor: pointer;
+    margin-left: -5px;
+}
+
+.newsletter div button:hover {
+
+    --midnight: #8a42ff;
+    border-left: none;
+}
+
+.black_div {
+
+    display: none;
+    transition: 1s;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 10;
+}
+
+.signup_form_div {
+
+    display: none;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #fff;
+    width: 400px;
+    position: fixed;
+    top: 200px;
+    left: calc(50% - 220px);
+    opacity: 1;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px #aaa;
+}
+
+.signup_form_div h3 {
+
+    margin-bottom: 10px;
+    color: var(--midnight);
+}
+
+.signup_form_div input {
+
+    background-color: #fafafa;
+    padding: 4px;
+    font-size: 18px;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+}
+
+.signup_form_div button {
+
+    margin-top: 10px;
+    border: 1px solid var(--purple);
+    background: none;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 20px;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.signup_form_div button:hover {
+
+    background-color: var(--purple);
+    color: #fff;
+}
+
+.signup_form_div p {
+
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#close_signup_form_div {
+
+    border: none;
+    color: #999;
+    font-size: 16px;
+}
+
+#close_signup_form_div:hover {
+
+    background-color: #f0f0f0;
+}
